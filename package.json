@@ -1,0 +1,26 @@
+{
+  "name": "agentic-incident-demo",
+  "version": "1.0.0",
+  "description": "Agentic incident response demo: parallel specialist agents, correlation, human approval in Port, rollback and verification.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "demo": "node scripts/demo.js",
+    "app": "node app/server.js",
+    "load": "node scripts/load.js",
+    "agents": "node orchestrator/index.js",
+    "investigate": "node orchestrator/index.js --investigate-now",
+    "deploy": "node scripts/deploy.js",
+    "reset": "node scripts/reset.js",
+    "port:setup": "node port/setup.js",
+    "port:action": "node port/setup.js --action-only",
+    "port:print": "node port/setup.js --print"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^4.22.3",
+    "openai": "^7.45.1"
+  }
+}
